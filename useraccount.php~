@@ -1,0 +1,41 @@
+<?php 
+session_start();
+$servername = "localhost";
+$username = "wendy";
+$password = "9895@Kwtendy";
+$dbname = "artgallery1";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error){
+    die("Connection failed: "
+        . $conn->connect_error);
+}
+$sqlquery = "SELECT * FROM admin";
+if ($conn->query($sql) === TRUE) {
+    echo "record inserted successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+?>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<div class="topnav">
+  <a href="#allpieces">All Pieces</a>
+  <a href="#addpiece">Add Piece</a>
+  <a href="#search">Search</a>
+  <a class="active" href="#account">Account</a>
+</div>
+<?php
+//set session variables
+
+?>
+<h1>
+    NAME
+    <?php
+    ?>
+</h1>
+
+</html>
