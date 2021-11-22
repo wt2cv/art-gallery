@@ -25,3 +25,7 @@
     background-color: #04AA6D;
     color: white;
   }
+  /* Align tabs to the right on nav bar */
+  .topnav-right{
+    float: right;
+  }
