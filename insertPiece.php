@@ -1,5 +1,6 @@
 <html> 
     <h1> Results page: </h1>
+
     <body> 
     <!-- https://www.geeksforgeeks.org/how-to-insert-form-data-into-database-using-php/ -->
         <?php
@@ -84,6 +85,7 @@
         echo "<h1> Success! </h1>";
         echo "<h2> <i> Your piece is now visible in the gallery archives! </i> </h2>";
         mysqli_close($conn);
+
         
         
         // $result = $conn->query($sqlquery1);
