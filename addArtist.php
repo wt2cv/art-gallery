@@ -11,7 +11,6 @@
         <p>Employee ID of Artist's Manager: <input type="number" name="contact" /> <p> 
         <p>Date Artist Signed with Gallery: <input type="date" name="dateSigned" /> <p> 
         <p>Phone numbers (1 minimum, up to 5): </p> 
-        <!-- Phone: (phone_number, phone_type, phone_preferred) -->
         <p> Number: <input type="text" name="phnum1"> <br> 
             Phone type: <br> 
             <input type="radio" name="phnum1type" value="Cell">

@@ -25,6 +25,7 @@
         $dateSigned = $_REQUEST['dateSigned']; 
         $sqlquery4 = "INSERT INTO client_of (artistID, employeeID, dateSigned) VALUES ('$id', '$empContact', '$dateSigned')"; 
 
+
         if (!mysqli_query($conn, $sqlquery2)) {
             die('Error: ' . mysqli_error($conn));
         }
