@@ -1,52 +1,40 @@
 <!DOCTYPE html>
 <html>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
 <head>
 <title>ART UNLIMITED</title>
-<!-- https://www.geeksforgeeks.org/how-to-insert-form-data-into-database-using-php/ -->
 <?php 
 include 'header.php';
 include 'database.php';
-
 $sqlquery = "SELECT * FROM art_piece";
 $result = $conn->query($sqlquery);
-$row = mysqli_fetch_assoc($result);
 
 ?>
 
-
+<style>
+<?php include 'style.css'; ?>
+</style>
 <body>
-<div style="display:block; width:100%;">
-<div style="width:50%; float: left; display: inline-block;">
-<h1>
+<h2 style="text-align: center; padding-top: 1%"> All Paintings</h2>
     <?php
+    
     if ($result->num_rows > 0) {
-  // output data of each row
-    echo $row["title"]. "<br>";
-    $image = $row["image_url"];
-    $imageData = base64_encode(file_get_contents($image));
-    echo '<img src = "data:image/jpeg;base64,'. $imageData. '">';
+        echo '<div class="row d-flex justify-content-center">';
+        while ($row = mysqli_fetch_assoc($result)){
+
+            echo '<div class="card text-center" style="width: 25rem; margin: 1.5rem; box-shadow: 0 2px 10px rgb(0 0 0 / 0.2); word-wrap: break-word;">';
+            echo "<b><div class='card-title' style='padding-top:3%;padding-right:3%;padding-left:3%; font-size: 20px'>". $row["title"] ."</div></b>";
+            echo ' <div style="padding: 2%; "> <img style="width: 52%; height:100%" src = "'. $row["image_url"]. '"></div>';
+            echo '<div class="card-text" style="color: grey">'. $row["type"] . ', '. $row["width"]. ' W x ' . $row["length"]. ' H x ' .$row["height"]. ' D in ' .  '</div>';
+            echo "<div class='card-title' >". $row["description"] ."</div>";
+            echo '</div>';
+    
+        }
+        echo '</div>';
 } else {
   echo "0 results";
 }
 	?>
-</h1>
-<a href = addPiece.php target = "_self">
-   <button>ADD PIECE</button>
-</a>
-</div>
-<div style="width:30%; float: right; display: inline-block;">
-<p>
-<?php
-   if ($result->num_rows > 0) {
-  // output data of each row
-    echo "Piece ID: " . $row["pieceID"]. "<br>";
-    echo "Description: " . "<br>" . $row["description"]. "<br>";
-   } else{
-     echo "0 results";
-   }
-  ?>
-</p>
-</div>
-</div>
-
+</body>
 </html>

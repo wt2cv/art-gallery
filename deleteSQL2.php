@@ -1,11 +1,13 @@
 <html> 
+     <?php
+     
+        include 'header.php';
+        include 'database.php';
+         ?>
     <h1> Results page: </h1>
     <body> 
     <!-- https://www.geeksforgeeks.org/how-to-insert-form-data-into-database-using-php/ -->
         <?php
-     
-        include 'header.php';
-        include 'database.php';
 
         $delRequestType = $_REQUEST['type'];
         $sqlquery= ""; 

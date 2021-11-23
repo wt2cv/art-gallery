@@ -3,13 +3,14 @@
 </style>
 
 <div class="topnav">
-  <a href="homepage.php">ARTS UNLIMITED </a>
+  <b><a href="homepage.php">ARTS UNLIMITED </a></b>
   <div class='topnav-center'>
   <a href="homepage.php">All Pieces</a>
   <a href="addPiece.php">Add Piece</a>
   <a href="#allartists">All Artists</a>
   <a href="addArtist.php">Add Artist</a>
   <a href="search.php">Search</a>
+  <a href="deleteRequest2.php">Delete</a>
   <div class='topnav-right'>
       <a  href="useraccount.php">Account</a>
 </div>
