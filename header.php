@@ -7,7 +7,7 @@
   <div class='topnav-center'>
   <a href="homepage.php">All Pieces</a>
   <a href="addPiece.php">Add Piece</a>
-  <a href="#allartists">All Artists</a>
+  <a href="allArtists.php">All Artists</a>
   <a href="addArtist.php">Add Artist</a>
   <a href="search.php">Search</a>
   <a href="deleteRequest2.php">Delete</a>
