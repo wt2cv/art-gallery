@@ -1,32 +1,52 @@
-<?php
-
-/**
- * A list of links to display on the homepage. This is really only here to demonstrate
- * that PHP is being executed.
- */
-$links = ['search.php'];
+<!DOCTYPE html>
+<html>
+<head>
+<title>ART UNLIMITED</title>
+<!-- https://www.geeksforgeeks.org/how-to-insert-form-data-into-database-using-php/ -->
+<?php 
+include 'header.php';
 include 'database.php';
 
-$stmt = $db->prepare("SELECT * FROM art_piece");
-$stmt->execute();
+$sqlquery = "SELECT * FROM art_piece";
+$result = $conn->query($sqlquery);
+$row = mysqli_fetch_assoc($result);
 
 ?>
+
+
+<body>
+<div style="display:block; width:100%;">
+<div style="width:50%; float: left; display: inline-block;">
+<h1>
+    <?php
+    if ($result->num_rows > 0) {
+  // output data of each row
+    echo $row["title"]. "<br>";
+    $image = $row["image_url"];
+    $imageData = base64_encode(file_get_contents($image));
+    echo '<img src = "data:image/jpeg;base64,'. $imageData. '">';
+} else {
+  echo "0 results";
+}
+	?>
+</h1>
+<a href = addPiece.php target = "_self">
+   <button>ADD PIECE</button>
+</a>
+</div>
+<div style="width:30%; float: right; display: inline-block;">
+<p>
 <?php
-include('header.php');
-?>
-<h1>Welcome to the Homepage!</h1>
-<h2>all paintings coming soon</h2>
+   if ($result->num_rows > 0) {
+  // output data of each row
+    echo "Piece ID: " . $row["pieceID"]. "<br>";
+    echo "Description: " . "<br>" . $row["description"]. "<br>";
+   } else{
+     echo "0 results";
+   }
+  ?>
+</p>
+</div>
+</div>
 
-<ul>
-    <?php foreach ($links as $link): ?>
-        <li>Go to <a href="/<?= $link ?>"><code><?= $link ?></code></a></li>
-    <?php endforeach ?>
-    <?php 
-while($row = $stmt->fetch()){
-    $title = $row['title'];
-    $description = $row["description"];
-
-    echo "<b><i>$title</b></i><br />-$description</p>";
-}?>
-   
-</ul>
+</html>
