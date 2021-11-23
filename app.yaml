@@ -2,5 +2,9 @@
 runtime: php73
 
 # Defaults to "serve index.php"
-entrypoint: serve helloworld.php
+# entrypoint: serve helloworld.php
 # If your main page is index.php, comment the above entrypoint setting
+
+env_variables:
+  DB_USER: bs6sxv
+  DB_PASS: pCdqB7ewiSGc(ZY@
