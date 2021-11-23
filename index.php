@@ -8,10 +8,13 @@
 # [START gae_simple_front_controller]
 switch (@parse_url($_SERVER['REQUEST_URI'])['path']) {
     case '/':
-        require 'src/homepage.php';
+        require 'homepage.php';
+        break;
+    case '/homepage.php':
+        require 'homepage.php';
         break;
     case '/search.php':
-        require 'src/search.php';
+        require 'search.php';
         break;
     default:
         http_response_code(404);
