@@ -1,11 +1,12 @@
 <?php
-try{
- $user = getenv('DB_USER');
- $password = getenv('DB_PASS');
+$servername = "us-cdbr-east-04.cleardb.com";
+$username = "b6021ad705af81";
+$password = "62360869";
+$dbname = "heroku_61c36e5d3c76659";
 
-$db = new PDO('mysql:host=mysql01.cs.virginia.edu;dbname=bs6sxv',$user, $password);
-} catch (PDOException $e){
-    die('Connection Error: '. $e->getMessage());
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error){
+    die("Connection failed: "
+        . $conn->connect_error);
 }
-
 ?>
