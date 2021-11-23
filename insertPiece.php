@@ -20,13 +20,20 @@
         $length = $_REQUEST['length'];
         $type = $_REQUEST['type'];
         $description = $_REQUEST['descrip'];
+         $loc = $_REQUEST['loc']; 
+        $locID = $_REQUEST['locID'];
+        $locArea = $_REQUEST['locArea']; 
         $sqlquery1 = "INSERT INTO art_piece (pieceID, title, type, image_url, width, height, length, description) VALUES ('$id', '$title', '$type', '$url', '$width', '$height', '$length', '$description')"; 
         $sqlquery2 = "INSERT INTO created (artistID, pieceID, dateCreated) VALUES ('$artist', '$id', '$dateCreated')"; 
+        $sqlquery3 = "INSERT INTO location (locationID, area, pieceID) VALUES ('$locID', '$locArea', '$id')"; 
 
         if (!mysqli_query($conn, $sqlquery1)) {
             die('Error: ' . mysqli_error($conn));
         }
         if (!mysqli_query($conn, $sqlquery2)) {
+            die('Error: ' . mysqli_error($conn));
+        }
+        if (!mysqli_query($conn, $sqlquery3)) {
             die('Error: ' . mysqli_error($conn));
         }
         if (isset($_POST['blue'])) {

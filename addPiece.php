@@ -55,6 +55,8 @@ include 'database.php';
                 <label for="pink"> Pink </label><br>
                 <input type="checkbox" name="purple" value="Purple"/>
                 <label for="purple"> Purple </label><br>
+             <p> Location ID: <input type="number" name="locID"/> </p>
+            <p> Location Area: <input type="text" name="locArea"/> </p>
             <p><input type="submit" /></p>
         </form>
     </body> 
