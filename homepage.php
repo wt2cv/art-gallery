@@ -7,7 +7,7 @@
 $links = ['search.php'];
 include 'database.php';
 
-$stmt = $db->prepare("SELECT * FROM artist");
+$stmt = $db->prepare("SELECT * FROM art_piece");
 $stmt->execute();
 
 ?>
@@ -23,10 +23,10 @@ include('header.php');
     <?php endforeach ?>
     <?php 
 while($row = $stmt->fetch()){
-    $firstName = $row['firstName'];
-    $countryOfOrigin = $row["countryOfOrigin"];
+    $title = $row['title'];
+    $description = $row["description"];
 
-    echo "<b><i>$firstName</b></i><br />-$countryOfOrigin</p>";
+    echo "<b><i>$title</b></i><br />-$description</p>";
 }?>
    
 </ul>
