@@ -1,3 +1,8 @@
+<?php
+session_start();
+//checks to make sure a user session is started, else takes back to login
+if(isset($_SESSION['employeeID'])){ 
+  ?>
 <html> 
     <h1> Results page: </h1>
 
@@ -98,3 +103,10 @@
         ?>
     </body> 
 </html>
+<?php
+}
+else {
+  header("Location: loginPage.php");
+  exit();
+}
+?>

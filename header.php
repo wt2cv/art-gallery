@@ -13,6 +13,7 @@
   <a href="deleteRequest2.php">Delete</a>
   <div class='topnav-right'>
       <a  href="useraccount.php">Account</a>
+      <a href="userLogout.php">Login/Logout</a>
 </div>
   </div>
 </div>

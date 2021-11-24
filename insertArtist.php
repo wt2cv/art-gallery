@@ -1,3 +1,8 @@
+<?php
+session_start();
+//checks to make sure a user session is started, else takes back to login
+if(isset($_SESSION['employeeID'])){ 
+  ?>
 <html> 
     <h1> Add Artist Results page: </h1>
     <body> 
@@ -91,3 +96,10 @@
         ?>
     </body> 
 </html>
+<?php
+}
+else {
+  header("Location: loginPage.php");
+  exit();
+}
+?> 

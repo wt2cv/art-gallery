@@ -1,3 +1,8 @@
+<?php
+session_start();
+//checks to make sure a user session is started, else takes back to login
+if(isset($_SESSION['employeeID'])){ 
+  ?>
 <!DOCTYPE html>
 <html>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -51,3 +56,10 @@ $result = $conn->query($sqlquery);
 	?>
 </body>
 </html>
+<?php
+}
+else {
+  header("Location: loginPage.php");
+  exit();
+}
+?> 

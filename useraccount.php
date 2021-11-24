@@ -1,3 +1,8 @@
+<?php
+session_start();
+//checks to make sure a user session is started, else takes back to login
+if(isset($_SESSION['employeeID'])){ 
+  ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +22,9 @@ $row = mysqli_fetch_assoc($result);
 <div style="display:block; width:100%;">
 <div style="width:50%; float: left; display: inline-block;">
 <p> Signed in as...</p>
+<h1>Welcome, <?php echo $_SESSION['firstName']; ?></h1>
 <h1>
+    
     <?php
     if ($result->num_rows > 0) {
   // output data of each row
@@ -50,3 +57,10 @@ $row = mysqli_fetch_assoc($result);
 </body>
 
 </html>
+<?php
+}
+else {
+  header("Location: loginPage.php");
+  exit();
+}
+?> 
