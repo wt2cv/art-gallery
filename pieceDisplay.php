@@ -1,4 +1,8 @@
 <?php
+session_start();
+//checks to make sure a user session is started, else takes back to login
+if(isset($_SESSION['employeeID'])){ 
+  
 
 /**
  * A list of links to display on the homepage. This is really only here to demonstrate
@@ -30,3 +34,10 @@ while($row = $stmt->fetch()){
 }?>
    
 </ul>
+<?php
+}
+else {
+  header("Location: index.php");
+  exit();
+}
+?>

@@ -12,6 +12,7 @@
   <a href="search.php">Search</a>
   <div class='topnav-right'>
       <a  href="useraccount.php">Account</a>
+      <a href="userLogout.php">Logout</a>
 </div>
   </div>
 </div>
