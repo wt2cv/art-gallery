@@ -7,7 +7,8 @@
 <?php 
 include 'header.php';
 include 'database.php';
-$sqlquery = "SELECT * FROM artist";
+$artist = $_REQUEST['artist'];
+$sqlquery = "SELECT * FROM artist ORDER BY $artist ASC"; 
 $result = $conn->query($sqlquery);
 
 ?>
@@ -16,7 +17,7 @@ $result = $conn->query($sqlquery);
 <?php include 'style.css'; ?>
 </style>
 <body>
-    <h2 style="text-align: center; padding-top: 1%"> All Artists</h2>
+<h2 style="text-align: center; padding-top: 1%"> All Artists</h2>
 <div style="text-align:center; padding-top:1%">
 <form action="/sortArtists.php" method="post">
   <label for="artist">SORT BY:</label>
@@ -29,6 +30,7 @@ $result = $conn->query($sqlquery);
   <input style="background-color: #f2d2aa" type="submit">
 </form>
 </div>
+<b><div style="text-align:center">Sorted By: <?php echo $artist?></div></b>
     <?php
     
     if ($result->num_rows > 0) {
