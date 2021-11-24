@@ -7,7 +7,8 @@
 <?php 
 include 'header.php';
 include 'database.php';
-$sqlquery = "SELECT * FROM art_piece";
+$piece = $_REQUEST['pieces'];
+$sqlquery = "SELECT * FROM art_piece ORDER BY $piece ASC"; 
 $result = $conn->query($sqlquery);
 
 ?>
@@ -27,6 +28,7 @@ $result = $conn->query($sqlquery);
   <input style="background-color: #f2d2aa" type="submit">
 </form>
 </div>
+<b><div style="text-align:center">Sorted By: <?php echo $piece?></div></b>
 <div style="padding-top:1%">
     <?php
     

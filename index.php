@@ -37,6 +37,9 @@ switch (@parse_url($_SERVER['REQUEST_URI'])['path']) {
     case '/deleteRequest2.php':
         require 'deleteRequest2.php';
         break;
+    case '/sortPieces.php':
+        require 'sortPieces.php';
+        break;
     default:
         http_response_code(404);
         exit('Not Found');
