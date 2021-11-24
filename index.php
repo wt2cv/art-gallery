@@ -43,6 +43,9 @@ switch (@parse_url($_SERVER['REQUEST_URI'])['path']) {
     case '/sortArtists.php':
         require 'sortArtists.php';
         break;
+    case '/SearchResults.php':
+        require 'SearchResults.php';
+        break;
     default:
         http_response_code(404);
         exit('Not Found');

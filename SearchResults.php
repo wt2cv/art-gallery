@@ -9,6 +9,9 @@ form {
 }
 </style>
 <div class="container">
+<?php
+		include 'header.php';
+		include 'database.php'; ?>
 <head>
 	<title>Home</title>
 	<h1><p style="text-align:center">Search The Gallery </p></h1>

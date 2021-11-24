@@ -9,7 +9,7 @@
   <a href="addPiece.php">Add Piece</a>
   <a href="allArtists.php">All Artists</a>
   <a href="addArtist.php">Add Artist</a>
-  <a href="search.php">Search</a>
+  <a href="SearchResults.php">Search</a>
   <a href="deleteRequest2.php">Delete</a>
   <div class='topnav-right'>
       <a  href="useraccount.php">Account</a>

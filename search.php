@@ -9,14 +9,16 @@ form {
 }
 </style>
 <div class="container">
+<?php
+		include 'header.php';
+		include 'database.php'; ?>
 <head>
 	<h1><p style="text-align:center"> Results: </p></h1>
 </head>
     <body> 
 		<form>
         <?php
-		include 'header.php';
-		include 'database.php';
+	
 		
 		$button = $_GET ['submit'];
 		$search = $_GET ['search'];
