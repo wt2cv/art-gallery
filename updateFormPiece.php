@@ -8,6 +8,9 @@ form {
  border-radius: 5px; 
 }
 </style>
+ <?php
+        include 'header.php';
+		include 'database.php'; ?>
 <div class="container"> 
     <h1> Update a piece: </h1> 
     <h3> <i> Please enter the appropriate information below </i> </h3>
@@ -15,6 +18,7 @@ form {
 <div class="container"> 
     <body> 
         <form action="updatePiece.php" method="post">
+             <p><h5> Please <b>only</b> fill out the entries you would like to update, and leave the others blank if you would like them to remain the same </h5></p>
             <p>Piece ID Number: <input type="text" name="pieceID" /></p>
             <p>Title: <input type="text" name="title" /></p>
             <p>Type: </p>

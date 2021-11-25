@@ -58,6 +58,18 @@ switch (@parse_url($_SERVER['REQUEST_URI'])['path']) {
     case '/loginPage.php':
         require 'loginPage.php';
         break;
+    case '/updateArtist.php':
+        require 'updateArtist.php';
+        break;
+    case '/updateFormArtist.php':
+        require 'updateFormArtist.php';
+        break;
+    case '/updateFormPiece.php':
+        require 'updateFormPiece.php';
+        break;
+    case '/updatePiece.php':
+        require 'updatePiece.php';
+        break;
     default:
         http_response_code(404);
         exit('Not Found');

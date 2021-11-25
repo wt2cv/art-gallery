@@ -8,6 +8,9 @@ form {
  border-radius: 5px; 
 }
 </style>
+ <?php
+        include 'header.php';
+		include 'database.php'; ?>
 <div class="container"> 
     <h1> Update an artist: </h1> 
     <h3> <i> Please enter the appropriate information below </i> </h3>
