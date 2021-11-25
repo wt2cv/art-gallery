@@ -38,6 +38,9 @@ if(mysqli_num_rows($result) == 1){
         $_SESSION['firstName'] = $row['firstName'];
         $_SESSION['lastName'] = $row['lastName'];
         $_SESSION['email'] = $row['email'];
+        $_SESSION['image_url'] = $row['image_url'];
+        $_SESSION['address'] = $row['address'];
+        $_SESSION['begin_date'] = $row['begin_date'];
         header("Location: homepage.php");
         exit();
     }
