@@ -8,7 +8,7 @@
 include 'header.php';
 include 'database.php';
 $piece = $_REQUEST['pieces'];
-$sqlquery = "SELECT * FROM art_piece ORDER BY $piece ASC"; 
+$sqlquery = "SELECT * FROM art_piece NATURAL JOIN artist  NATURAL JOIN created ORDER BY $piece ASC"; 
 $result = $conn->query($sqlquery);
 
 ?>
@@ -18,6 +18,11 @@ $result = $conn->query($sqlquery);
 <body>
 <h2 style="text-align: center; padding-top: 1%"> All Pieces</h2>
 <div style="text-align:center; padding-top:1%">
+<div style="padding-bottom:1%">
+<span style="padding-right:1%">
+<button onclick="location.href='updateFormPiece.php';" style="background-color: #f2d2aa; border-radius: 5px; padding: .2%" > ✎ UPDATE PIECE </button></span>
+<button onclick="location.href='addPiece.php';" style="background-color: #f2d2aa; border-radius: 5px; padding: .2%" > ⊕ ADD PIECE </button>
+</div>
 <form action="/sortPieces.php" method="post">
   <label for="pieces">SORT BY:</label>
   <select id="pieces" name="pieces">
@@ -39,9 +44,10 @@ $result = $conn->query($sqlquery);
             echo '<div class="card text-center" style="width: 25rem; margin: 1.5rem; box-shadow: 0 2px 10px rgb(0 0 0 / 0.2); word-wrap: break-word;">';
             echo "<b><div class='card-title' style='padding-top:3%;padding-right:3%;padding-left:3%; font-size: 20px'>". $row["title"] ."</div></b>";
             echo ' <div style="padding: 2%; "> <img style="width: 52%; height:100%" src = "'. $row["image_url"]. '"></div>';
+            echo "<div style='padding: 1%' >". $row["firstName"] . " " . $row["lastName"]. "</div>";
             echo '<div style="color: grey">'. $row["type"] . ', '. $row["width"]. ' W x ' . $row["length"]. ' H x ' .$row["height"]. ' D in ' .  '</div>';
             echo "<div style='padding: 1%' >". $row["description"] ."</div>";
-             echo "<b><div style='padding: 1%' >". 'Piece ID: '. $row["pieceID"] ."</div></b>";
+            echo "<b><div style='padding: 1%' >". 'Piece ID: '. $row["pieceID"] ."</div></b>";
             echo '</div>';
     
         }
