@@ -18,7 +18,10 @@ include 'header.php';
 include 'database.php';
 
 ?>
-<div class="container"> 
+<div style="padding-left: 15%; padding-top:2%">
+    <a style="color: black " href="homepage.php">← Go Back</a>
+</div> 
+<div class="container" style="text-align: center"> 
     <h1> Add a piece: </h1> 
     <h3> <i> Please enter the appropriate information below </i> </h3>
 </div> 

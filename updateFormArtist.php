@@ -11,6 +11,9 @@ form {
  <?php
         include 'header.php';
 		include 'database.php'; ?>
+<div style="padding-left: 15%; padding-top:2%">
+    <a style="color: black " href="allArtists.php">← Go Back</a>
+</div> 
 <div class="container"> 
     <h1> <p style="text-align:center"> Update an artist: </p></h1> 
 </div> 

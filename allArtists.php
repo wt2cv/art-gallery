@@ -21,7 +21,14 @@ $result = $conn->query($sqlquery);
 <?php include 'style.css'; ?>
 </style>
 <body>
-    <h2 style="text-align: center; padding-top: 1%"> All Artists</h2>
+        <h2 style="text-align: center; padding-top: 1%"> All Artists</h2>
+
+<div style="text-align:center; padding-top:1%">
+<div style="padding-bottom:1%">
+<span style="padding-right:1%">
+<button onclick="location.href='updateFormArtist.php';" style="background-color: #f2d2aa; border-radius: 5px; padding: .2%" > ✎ UPDATE ARTIST </button></span>
+<button onclick="location.href='addArtist.php';" style="background-color: #f2d2aa; border-radius: 5px; padding: .2%" > ⊕ ADD ARTIST </button>
+</div>
 <div style="text-align:center; padding-top:1%">
 <form action="/sortArtists.php" method="post">
   <label for="artist">SORT BY:</label>
@@ -31,7 +38,7 @@ $result = $conn->query($sqlquery);
     <option value="lastName">Last Name</option>
     <option value="countryOfOrigin">Country</option>
   </select>
-  <input style="background-color: #f2d2aa" type="submit">
+  <input style="background-color: #f2d2aa;border-radius: 5px;" type="submit">
 </form>
 </div>
     <?php

@@ -18,7 +18,10 @@ include 'header.php';
 include 'database.php';
 
 ?>
-<div class="container"> 
+<div style="padding-left: 15%; padding-top:2%">
+    <a style="color: black " href="allArtists.php">← Go Back</a>
+</div> 
+<div style="text-align:center" class="container"> 
     <h1> Add an artist: </h1> 
     <h3> <i> Please enter the appropriate information below </i> </h3>
     </div>

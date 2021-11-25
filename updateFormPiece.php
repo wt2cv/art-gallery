@@ -8,6 +8,11 @@ form {
  border-radius: 5px; 
 }
 </style>
+<?php   include 'header.php';
+		include 'database.php'; ?>
+<div style="padding-left: 15%; padding-top:2%">
+    <a style="color: black " href="homepage.php">← Go Back</a>
+</div> 
 <div class="container"> 
     <h1> <p style="text-align:center">Update a piece: </p></h1> 
 </div> 
