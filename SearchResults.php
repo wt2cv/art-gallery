@@ -32,7 +32,7 @@ form {
 
 	<form name="form1" method="get" action="search.php">
 	<p style="text-align:center"><input  type="text" size="70" placeholder="Search" name="search" aria-label="Search" required></p>
-	<p style="text-align:center"><input style="background-color: #f2d2aa" type="submit" value="Search" name="submit"></input>
+	<p style="text-align:center"><input style="background-color: #f2d2aa; border-radius: 5px" type="submit" value="Search" name="submit"></input>
 	<h3><p style="text-align:center">Searching for: </p></h3>
 		<p style="text-align:center"><input type="radio" name="searchtype" value="Artist">
 			<label for="artisttype"> Artist </label> 

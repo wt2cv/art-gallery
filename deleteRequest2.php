@@ -41,7 +41,7 @@ include 'database.php';
                 <input type="radio" id="admin" name="type" value="admin"/>
                 <label for="admin"> Admin </label><br>
                 <p> Admin ID Number: <input type="number" name="adminID"/> </p> 
-        <p><input type="submit" /></p>
+        <p><input style="background-color: #f2d2aa; border-radius: 5px" type="submit" /></p>
     </form> 
 </body> 
 </div> 
