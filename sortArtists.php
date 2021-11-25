@@ -7,6 +7,7 @@
 <?php 
 include 'header.php';
 include 'database.php';
+include 'style.css';
 $artist = $_REQUEST['artist'];
 $sqlquery = "SELECT * FROM artist ORDER BY $artist ASC"; 
 $result = $conn->query($sqlquery);

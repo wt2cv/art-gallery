@@ -12,22 +12,26 @@ form {
  border: 1px solid DimGray;
  border-radius: 5px; 
 }
+
 </style>
 <?php 
 include 'header.php';
 include 'database.php';
-
 ?>
+<style>
+<?php include 'style.css'; ?>
+</style>
 <div style="padding-left: 15%; padding-top:2%">
     <a style="color: black " href="homepage.php">← Go Back</a>
 </div> 
 <div class="container" style="text-align: center"> 
     <h1> Add a piece: </h1> 
-    <h3> <i> Please enter the appropriate information below </i> </h3>
 </div> 
 <div class="container"> 
     <body> 
         <form action="insertPiece.php" method="post">
+            <h3 style="text-align:center; padding: 1%"> Please enter the appropriate information below  </h3>
+             <hr size="8" width="100%" color="black"> 
             <p>Title: <input type="text" name="title" /></p>
             <p>Piece ID Number: <input type="text" name="pieceID" /></p>
             <p>Type: </p>
@@ -65,7 +69,7 @@ include 'database.php';
                 <label for="purple"> Purple </label><br>
              <p> Location ID: <input type="number" name="locID"/> </p>
             <p> Location Area: <input type="text" name="locArea"/> </p>
-            <p><input type="submit" /></p>
+            <p><input style="background-color: #f2d2aa; border-radius: 5px" type="submit" /></p>
         </form>
     </body> 
 </div>

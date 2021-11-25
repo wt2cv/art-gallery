@@ -7,12 +7,14 @@ if(isset($_SESSION['employeeID'])){
 <html>
 <head>
 <title>ART UNLIMITED</title>
+<style>
+<?php include 'style.css'; ?>
+</style>
 <!-- https://www.geeksforgeeks.org/how-to-insert-form-data-into-database-using-php/ -->
 <?php 
 
 include 'header.php';
 include 'database.php';
-
 $sqlquery = "SELECT * FROM admin";
 $result = $conn->query($sqlquery);
 $row = mysqli_fetch_assoc($result);

@@ -10,12 +10,14 @@ form {
 </style>
 <div class="container"> 
     <body> 
+        <style>
+<?php include 'style.css'; ?>
+</style>
     <form>
     <!-- https://www.w3schools.com/php/php_mysql_update.asp -->
         <?php
         include 'header.php';
 		include 'database.php';
-        
         $title = $_REQUEST['title'];
         $id = $_REQUEST['pieceID'];
         $artist = $_REQUEST['artist'];

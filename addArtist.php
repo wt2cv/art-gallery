@@ -16,18 +16,21 @@ form {
 <?php 
 include 'header.php';
 include 'database.php';
-
 ?>
+<style>
+<?php include 'style.css'; ?>
+</style>
 <div style="padding-left: 15%; padding-top:2%">
     <a style="color: black " href="allArtists.php">← Go Back</a>
 </div> 
 <div style="text-align:center" class="container"> 
     <h1> Add an artist: </h1> 
-    <h3> <i> Please enter the appropriate information below </i> </h3>
     </div>
 <div class="container"> 
     <body>     
         <form action="insertArtist.php" method="post">
+             <h3 style="text-align:center; padding: 1%"> Please enter the appropriate information below  </h3>
+             <hr size="8" width="100%" color="black"> 
             <p>Artist ID Number: <input type="number" name="artistID" /></p>
             <p>First name: <input type="text" name="fname" /></p>
             <p>Last name: <input type="text" name="lname" /></p>
@@ -96,7 +99,7 @@ include 'database.php';
                     <input type="radio" name="phnum5pref" value="N">
                     <label for="phnum5pref"> Not preferred </label>
             </p>
-            <p><input type="submit" /></p>
+            <p><input style="background-color: #f2d2aa; border-radius: 5px" type="submit" /></p>
         </form> 
     </body> 
 </div>

@@ -18,14 +18,14 @@ $password = validate($_POST['password']);
 }
 
 //checks if no employee ID is entered
-if(empty($empID)){
-    header ("Location: loginPage.php?error=User Name is required");
-    exit();
-}
-else if(empty($password)) {
-    header ("Location: loginPage.php?error=Password is required");
-    exit();
-}
+// if(empty($empID)){
+//     header ("Location: loginPage.php?error=User Name is required");
+//     exit();
+// }
+// else if(empty($password)) {
+//     header ("Location: loginPage.php?error=Password is required");
+//     exit();
+// }
 
 $sqlquery = "SELECT * FROM admin WHERE employeeID = '$empID' AND password='$password'";
 $result = $conn->query($sqlquery);
@@ -33,13 +33,16 @@ $row = mysqli_fetch_assoc($result);
 //echo $row;
 if(mysqli_num_rows($result) == 1){
     if($row['employeeID']==$empID && $row['password'] == $password){
-        echo "Logged In!";
+       echo "Logged In!";
         $_SESSION['employeeID'] = $row['employeeID'];
         $_SESSION['firstName'] = $row['firstName'];
         $_SESSION['lastName'] = $row['lastName'];
         $_SESSION['email'] = $row['email'];
-       // header("Location: useraccount.php");
+  //  header("Location: useraccount.php");
         exit();
     }
+} else {
+    echo "Logged In!";
+     // header("Location: userLogin.php");
 }
 ?>

@@ -10,6 +10,9 @@ form {
 </style>
 <div class="container"> 
     <body> 
+        <style>
+<?php include 'style.css'; ?>
+</style>
     <form>
     <!-- https://www.w3schools.com/php/php_mysql_update.asp  -->
         <?php

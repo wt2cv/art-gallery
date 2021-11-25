@@ -14,7 +14,7 @@ if(isset($_SESSION['employeeID'])){
 	    // $db = DbUtil::loginConnection();
         include 'header.php';
         include 'database.php';
-        
+
         $title = $_REQUEST['title'];
         $id = $_REQUEST['pieceID'];
         $artist = $_REQUEST['artist'];

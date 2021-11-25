@@ -13,7 +13,8 @@ $result = $conn->query($sqlquery);
 
 ?>
 <style>
-<?php include 'style.css'; ?>
+<?php include 'style.css';
+?>
 </style>
 <body>
 <h2 style="text-align: center; padding-top: 1%"> All Pieces</h2>

@@ -10,6 +10,9 @@ if(isset($_SESSION['employeeID'])){
 
 <head>
 <title>ART UNLIMITED</title>
+<style>
+<?php include 'style.css'; ?>
+</style>
 <?php 
 
 include 'header.php';
@@ -22,7 +25,7 @@ $result = $conn->query($sqlquery);
 <?php include 'style.css'; ?>
 </style>
 <body>
-<h2 style="text-align: center; padding-top: 1%"> All Pieces</h2>
+<h1 style="text-align: center; padding-top: 1%"> All Pieces</h1>
 <div style="text-align:center; padding-top:1%">
 <div style="padding-bottom:1%">
 <span style="padding-right:2%">

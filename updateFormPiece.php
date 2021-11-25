@@ -8,8 +8,12 @@ form {
  border-radius: 5px; 
 }
 </style>
+<style>
+<?php include 'style.css'; ?>
+</style>
 <?php   include 'header.php';
-		include 'database.php'; ?>
+		include 'database.php'; 
+     ?>
 <div style="padding-left: 15%; padding-top:2%">
     <a style="color: black " href="homepage.php">← Go Back</a>
 </div> 
@@ -60,7 +64,7 @@ form {
                 <label for="purple"> Purple </label><br>
             <p> Location ID: <input type="number" name="locID"/> </p>
             <p> Location Area: <input type="text" name="locArea"/> </p> 
-            <p><input type="submit" /></p>
+            <p><input style="background-color: #f2d2aa; border-radius: 5px" type="submit" /></p>
         </form>
     </body> 
 </div>

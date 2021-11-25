@@ -6,11 +6,13 @@ if(isset($_SESSION['employeeID'])){
 <html> 
     <h1> Add Artist Results page: </h1>
     <body> 
+        <style>
+<?php include 'style.css'; ?>
+</style>
     <!-- https://www.geeksforgeeks.org/how-to-insert-form-data-into-database-using-php/ -->
         <?php
        include 'header.php';
         include 'database.php';
-        
         $id = $_REQUEST['artistID'];
         $fname = $_REQUEST['fname'];
         $lname = $_REQUEST['lname'];

@@ -1,4 +1,6 @@
 <html> 
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 <style type="text/css">
 form {
  margin: 0;
@@ -8,13 +10,17 @@ form {
  border-radius: 5px;
 }
 </style>
-<div class="container">
-
 <?php
 		include 'header.php';
-		include 'database.php'; ?>
+		include 'database.php';
+        ?>
+<div class="container">
+<style>
+<?php include 'style.css'; ?>
+</style>
+
 <head>
-	<h1><p style="text-align:center"> Results: </p></h1>
+	<h1><p style="text-align:center; padding-top:2%"> Results: </p></h1>
 </head>
     <body> 
 		<form>
@@ -46,7 +52,7 @@ form {
 			echo "We were unable to find a item with a search term of '<b>$search</b>'.";
 			}
 			else{
-			echo "<h1><strong> $foundnum Results Found for \"" .$search."\" </strong></h1>";      
+			echo "<h1 style='padding-top:2%'><strong> $foundnum Results Found for \"" .$search."\" </strong></h1>";      
 		
 			// get num of results stored in database
 			$sql = "SELECT * FROM artist WHERE artistID LIKE '%$search%' OR
@@ -137,7 +143,7 @@ form {
 			echo "We were unable to find a item with a search term of '<b>$search</b>'.";
 			}
 			else{
-			echo "<h1><strong> $pfoundnum Results Found for \"" .$search."\" </strong></h1>";  
+			echo "<h1 style='padding-top:2%'><strong> $pfoundnum Results Found for \"" .$search."\" </strong></h1>";  
 			}    
 		
 			// get num of results stored in database
@@ -211,7 +217,7 @@ form {
 				echo "We were unable to find a item with a search term of '<b>$search</b>'.";
 			}
 			else{
-			echo "<h1><strong> $lfoundnum Results Found for \"" .$search."\" </strong></h1>";      
+			echo "<h1 style='padding-top:2%'><strong> $lfoundnum Results Found for \"" .$search."\" </strong></h1>";      
 		
 			// get num of results stored in database
 			$lsql ="SELECT * FROM location WHERE locationID LIKE '$search' OR
@@ -277,7 +283,7 @@ form {
 				echo "We were unable to find a item with a search term of '<b>$search</b>'.";
 			}
 			else{
-			echo "<h1><strong> $afoundnum Results Found for \"" .$search."\" </strong></h1>";      
+			echo "<h1 style='padding-top:2%'><strong> $afoundnum Results Found for \"" .$search."\" </strong></h1>";      
 		
 			// get num of results stored in database
 			$asql ="SELECT * FROM admin WHERE employeeID LIKE '$search' OR
@@ -350,7 +356,7 @@ form {
 				echo "We were unable to find a item with a search term of '<b>$search</b>'.";
 			}
 			else{
-			echo "<h1><strong> $cfoundnum Results Found for \"" .$search."\" </strong></h1>";      
+			echo "<h1 style='padding-top:2%'><strong> $cfoundnum Results Found for \"" .$search."\" </strong></h1>";      
 		
 			// get num of results stored in database
 			$csql ="SELECT * FROM client_of WHERE artistID LIKE '$search' OR
@@ -437,7 +443,7 @@ form {
 				echo "We were unable to find a item with a search term of '<b>$search</b>'.";
 			}
 			else{
-			echo "<h1><strong> $efoundnum Results Found for \"" .$search."\" </strong></h1>";      
+			echo "<h1 style='padding-top:2%'><strong> $efoundnum Results Found for \"" .$search."\" </strong></h1>";      
 		
 			// get num of results stored in database
 			$esql ="SELECT * FROM entered_by WHERE employeeID LIKE '$search' OR

@@ -16,15 +16,18 @@ form {
 <?php 
 include 'header.php';
 include 'database.php';
-
 ?>
+<style>
+<?php include 'style.css'; ?>
+</style>
 <div class="container"> 
-<h1> Make a delete request: </h1> 
-<h3> <i> Select the appropriate category for your deletion request, then fill out the required information </i> </h3>
+<h1 style="padding-top:1.5%; text-align: center"> Make a delete request: </h1> 
 </div> 
 <div class= "container"> 
 <body> 
     <form action="deleteSQL2.php" method="post">
+        <h3 style="padding:1%; text-align: center"> Select the appropriate category for your deletion request, then fill out the required information </h3>
+          <hr size="8" width="100%" color="black"> 
         <p> Category of Deletion Request: </p> 
                 <input type="radio" id="artist" name="type" value="artist"/>
                 <label for="artist"> Artist </label><br>

@@ -5,6 +5,8 @@ if(isset($_SESSION['employeeID'])){
   ?>
 <!DOCTYPE html>
 <html>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 <style type="text/css">
 form {
  margin: 0;
@@ -13,19 +15,24 @@ form {
  border-radius: 5px;
 }
 </style>
-<div class="container">
 <?php
 		include 'header.php';
-		include 'database.php'; ?>
+		include 'database.php'; 
+	?>
+<div class="container">
+	<style>
+<?php include 'style.css'; ?>
+</style>
+
 <head>
 	<title>Home</title>
-	<h1><p style="text-align:center">Search The Gallery </p></h1>
+	<h1 style="padding-top: 2%"><p style="text-align:center">Search The Gallery </p></h1>
 </head>
 <body>
 
 	<form name="form1" method="get" action="search.php">
-	<p style="text-align:center"><input type="text" size="70" placeholder="Search" name="search" aria-label="Search" required></p>
-	<p style="text-align:center"><input type="submit" value="Search" name="submit"></input>
+	<p style="text-align:center"><input  type="text" size="70" placeholder="Search" name="search" aria-label="Search" required></p>
+	<p style="text-align:center"><input style="background-color: #f2d2aa; border-radius: 5px" type="submit" value="Search" name="submit"></input>
 	<h3><p style="text-align:center">Searching for: </p></h3>
 		<p style="text-align:center"><input type="radio" name="searchtype" value="Artist">
 			<label for="artisttype"> Artist </label> 

@@ -8,9 +8,13 @@ form {
  border-radius: 5px; 
 }
 </style>
+<style>
+<?php include 'style.css'; ?>
+</style>
  <?php
         include 'header.php';
-		include 'database.php'; ?>
+		include 'database.php'; 
+  ?>
 <div style="padding-left: 15%; padding-top:2%">
     <a style="color: black " href="allArtists.php">← Go Back</a>
 </div> 
@@ -106,7 +110,7 @@ form {
                     <input type="radio" name="phnum5pref" value="N">
                     <label for="phnum5pref"> Not preferred </label>
             </p>
-            <p><input type="submit" /></p>
+            <p><input style="background-color: #f2d2aa; border-radius: 5px" type="submit" /></p>
         </form> 
     </body> 
 </div>

@@ -4,6 +4,9 @@
         include 'header.php';
         include 'database.php';
          ?>
+         <style>
+<?php include 'style.css'; ?>
+</style>
     <h1> Results page: </h1>
     <body> 
     <!-- https://www.geeksforgeeks.org/how-to-insert-form-data-into-database-using-php/ -->
