@@ -9,6 +9,7 @@ form {
 }
 </style>
 <div class="container">
+
 <?php
 		include 'header.php';
 		include 'database.php'; ?>
@@ -18,8 +19,7 @@ form {
     <body> 
 		<form>
         <?php
-	
-		
+		/*---- https://riyoalo.medium.com/building-a-custom-search-engine-using-php-and-mysql-b9265a1693b2 ----*/
 		$button = $_GET ['submit'];
 		$search = $_GET ['search'];
 		
@@ -43,7 +43,7 @@ form {
 		
 			if ($foundnum==0)
 			{
-			echo "We were unable to find a product with a search term of '<b>$search</b>'.";
+			echo "We were unable to find a item with a search term of '<b>$search</b>'.";
 			}
 			else{
 			echo "<h1><strong> $foundnum Results Found for \"" .$search."\" </strong></h1>";      
@@ -134,7 +134,7 @@ form {
 		
 			if ($pfoundnum==0)
 			{
-			echo "We were unable to find a product with a search term of '<b>$search</b>'.";
+			echo "We were unable to find a item with a search term of '<b>$search</b>'.";
 			}
 			else{
 			echo "<h1><strong> $pfoundnum Results Found for \"" .$search."\" </strong></h1>";  
@@ -208,7 +208,7 @@ form {
 		
 			if ($lfoundnum==0)
 			{
-				echo "We were unable to find a product with a search term of '<b>$search</b>'.";
+				echo "We were unable to find a item with a search term of '<b>$search</b>'.";
 			}
 			else{
 			echo "<h1><strong> $lfoundnum Results Found for \"" .$search."\" </strong></h1>";      
@@ -274,7 +274,7 @@ form {
 		
 			if ($afoundnum==0)
 			{
-				echo "We were unable to find a product with a search term of '<b>$search</b>'.";
+				echo "We were unable to find a item with a search term of '<b>$search</b>'.";
 			}
 			else{
 			echo "<h1><strong> $afoundnum Results Found for \"" .$search."\" </strong></h1>";      
@@ -347,7 +347,7 @@ form {
 		
 			if ($cfoundnum==0)
 			{
-				echo "We were unable to find a product with a search term of '<b>$search</b>'.";
+				echo "We were unable to find a item with a search term of '<b>$search</b>'.";
 			}
 			else{
 			echo "<h1><strong> $cfoundnum Results Found for \"" .$search."\" </strong></h1>";      
@@ -434,7 +434,7 @@ form {
 		
 			if ($efoundnum==0)
 			{
-				echo "We were unable to find a product with a search term of '<b>$search</b>'.";
+				echo "We were unable to find a item with a search term of '<b>$search</b>'.";
 			}
 			else{
 			echo "<h1><strong> $efoundnum Results Found for \"" .$search."\" </strong></h1>";      
