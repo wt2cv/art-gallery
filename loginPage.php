@@ -18,7 +18,7 @@ form {
     <?php
 include 'header.php'; ?>
 <div style="padding:3%"></div>
-<div style="text-align:center; border: 1px solid #d6d6d6; padding: 1.5%; border-radius: 1%;  background-color: #f8f8f8; margin: auto;">
+<div style="text-align:center; border: 1px solid #d6d6d6; padding: 1.5%; border-radius: 1%;  background-color: #f8f8f8; margin: auto; width: 50%">
     <form action="userLogin.php" method="post">
         <h1>LOGIN</h1>
         <?php
