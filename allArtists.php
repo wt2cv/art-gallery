@@ -25,9 +25,9 @@ $result = $conn->query($sqlquery);
 
 <div style="text-align:center; padding-top:1%">
 <div style="padding-bottom:1%">
-<span style="padding-right:1%">
-<button onclick="location.href='updateFormArtist.php';" style="background-color: #f2d2aa; border-radius: 5px; padding: .2%" > ✎ UPDATE ARTIST </button></span>
-<button onclick="location.href='addArtist.php';" style="background-color: #f2d2aa; border-radius: 5px; padding: .2%" > ⊕ ADD ARTIST </button>
+<span style="padding-right:2%">
+<button onclick="location.href='updateFormArtist.php';" style="background-color: #f2d2aa; border-radius: 5px; padding: .2%; padding-left:.8%;padding-right:.8%" > ✎ UPDATE ARTIST </button></span>
+<button onclick="location.href='addArtist.php';" style="background-color: #f2d2aa; border-radius: 5px; padding: .2%; padding-left:.8%;padding-right:.8%" > ⊕ ADD ARTIST </button>
 </div>
 <div style="text-align:center; padding-top:1%">
 <form action="/sortArtists.php" method="post">
