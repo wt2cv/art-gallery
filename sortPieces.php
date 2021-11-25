@@ -17,12 +17,12 @@ $result = $conn->query($sqlquery);
 ?>
 </style>
 <body>
-<h2 style="text-align: center; padding-top: 1%"> All Pieces</h2>
+<h1 style="text-align: center; padding-top: 1%"> All Pieces</h1>
 <div style="text-align:center; padding-top:1%">
 <div style="padding-bottom:1%">
 <span style="padding-right:2%">
-<button onclick="location.href='updateFormPiece.php';" style="background-color: #f2d2aa; border-radius: 5px; padding: .2%; padding-left:.8%;padding-right:.8%" > ✎ UPDATE PIECE </button></span>
-<button onclick="location.href='addPiece.php';" style="background-color: #f2d2aa; border-radius: 5px; padding: .2%; padding-left:.8%;padding-right:.8%" > ⊕ ADD PIECE </button>
+<button onclick="location.href='updateFormPiece.php';" style="background-color: #f2d2aa; border-radius: 5px; padding: .2%; padding-left:.8%;padding-right:.8%; font-weight:bold" > ✎ UPDATE PIECE </button></span>
+<button onclick="location.href='addPiece.php';" style="background-color: #f2d2aa; border-radius: 5px; padding: .2%; padding-left:.8%;padding-right:.8%; font-weight:bold" > ⊕ ADD PIECE </button>
 </div>
 <form action="/sortPieces.php" method="post">
   <label for="pieces">SORT BY:</label>

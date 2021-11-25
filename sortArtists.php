@@ -7,7 +7,6 @@
 <?php 
 include 'header.php';
 include 'database.php';
-include 'style.css';
 $artist = $_REQUEST['artist'];
 $sqlquery = "SELECT * FROM artist ORDER BY $artist ASC"; 
 $result = $conn->query($sqlquery);
@@ -18,12 +17,12 @@ $result = $conn->query($sqlquery);
 <?php include 'style.css'; ?>
 </style>
 <body>
-<h2 style="text-align: center; padding-top: 1%"> All Artists</h2>
+<h1 style="text-align: center; padding-top: 1%"> All Artists</h1>
 <div style="text-align:center; padding-top:1%">
 <div style="padding-bottom:1%">
 <span style="padding-right:2%">
-<button onclick="location.href='updateFormArtist.php';" style="background-color: #f2d2aa; border-radius: 5px; padding: .2%; padding-left:.8%;padding-right:.8%" > ✎ UPDATE ARTIST </button></span>
-<button onclick="location.href='addArtist.php';" style="background-color: #f2d2aa; border-radius: 5px; padding: .2%; padding-left:.8%;padding-right:.8%" > ⊕ ADD ARTIST </button>
+<button onclick="location.href='updateFormArtist.php';" style="background-color: #f2d2aa; border-radius: 5px; padding: .2%; padding-left:.8%;padding-right:.8%; font-weight:bold" > ✎ UPDATE ARTIST </button></span>
+<button onclick="location.href='addArtist.php';" style="background-color: #f2d2aa; border-radius: 5px; padding: .2%; padding-left:.8%;padding-right:.8%; font-weight:bold" > ⊕ ADD ARTIST </button>
 </div>
 <form action="/sortArtists.php" method="post">
   <label for="artist">SORT BY:</label>
