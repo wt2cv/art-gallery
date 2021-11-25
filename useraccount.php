@@ -7,14 +7,12 @@ if(isset($_SESSION['employeeID'])){
 <html>
 <head>
 <title>ART UNLIMITED</title>
-<style>
-<?php include 'style.css'; ?>
-</style>
 <!-- https://www.geeksforgeeks.org/how-to-insert-form-data-into-database-using-php/ -->
 <?php 
 
 include 'header.php';
 include 'database.php';
+
 $sqlquery = "SELECT * FROM admin";
 $result = $conn->query($sqlquery);
 $row = mysqli_fetch_assoc($result);
@@ -24,14 +22,12 @@ $row = mysqli_fetch_assoc($result);
 <div style="display:block; width:100%;">
 <div style="width:50%; float: left; display: inline-block;">
 <p> Signed in as...</p>
-<h1>Welcome, <?php echo $_SESSION['firstName']; ?></h1>
 <h1>
-    
     <?php
     if ($result->num_rows > 0) {
   // output data of each row
-    echo "Name: " . $row["firstName"]. " " . $row["lastName"]. "<br>";
-    $image = $row["image_url"];
+    echo "Name: " . $_SESSION["firstName"]. " " . $_SESSION["lastName"]. "<br>";
+    $image = $_SESSION["image_url"];
     $imageData = base64_encode(file_get_contents($image));
     echo '<img src = "data:image/jpeg;base64,'. $imageData. '">';
 } else {
@@ -45,12 +41,12 @@ $row = mysqli_fetch_assoc($result);
 <?php
    if ($result->num_rows > 0) {
   // output data of each row
-    echo "Email: " . $row["email"]. "<br>";
-    echo "Employee ID: " . $row["employeeID"]. "<br>";
-    echo "Begin Date: " . $row["begin_date"]. "<br>";
-    echo "Address: " . $row["address"]. "<br>";
+    echo "Email: " . $_SESSION["email"]. "<br>";
+    echo "Employee ID: " . $_SESSION["employeeID"]. "<br>";
+    echo "Begin Date: " . $_SESSION["begin_date"]. "<br>";
+    echo "Address: " . $_SESSION["address"]. "<br>";
    } else{
-     echo "0results";
+     echo "0 results";
    }
   ?>
 </p>
@@ -62,7 +58,7 @@ $row = mysqli_fetch_assoc($result);
 <?php
 }
 else {
-  header("Location: loginPage.php");
+  header("Location: index.php");
   exit();
 }
-?> 
+?>
