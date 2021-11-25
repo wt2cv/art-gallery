@@ -19,10 +19,14 @@ $row = mysqli_fetch_assoc($result);
 
 ?>
 <body>
-<div style="display:block; width:100%;">
-<div style="width:50%; float: left; display: inline-block;">
+<div style="margin:auto; width:60%;">
+<div class="container"> 
+    <h1> <p style="text-align:center; font-weight:normal; font-size:1.2em">Administrator Account </p></h1> 
+</div>  <div style=" border: 0.5px solid DimGray;">
+<div style="width:50%; float: left; display: inline-block;
+">
 <p> Signed in as...</p>
-<h1>
+<h2>
     <?php
     if ($result->num_rows > 0) {
   // output data of each row
@@ -34,22 +38,23 @@ $row = mysqli_fetch_assoc($result);
   echo "0 results";
 }
 	?>
-</h1>
+</h2>
 </div>
 <div style="width:30%; float: right; display: inline-block;">
 <p>
 <?php
    if ($result->num_rows > 0) {
   // output data of each row
-    echo "Email: " . $_SESSION["email"]. "<br>";
-    echo "Employee ID: " . $_SESSION["employeeID"]. "<br>";
-    echo "Begin Date: " . $_SESSION["begin_date"]. "<br>";
-    echo "Address: " . $_SESSION["address"]. "<br>";
+    echo "<div style='padding-bottom:4%; padding-top:10%'>Email: " . $_SESSION["email"]. "</div>";
+    echo "<div style='padding-bottom:4%'>Employee ID: " . $_SESSION["employeeID"]. "</div>";
+    echo "<div style='padding-bottom:4%'>Begin Date: " . $_SESSION["begin_date"]. "</div>";
+    echo "<div style='padding-bottom:4%'>Address: " . $_SESSION["address"]. "</div>";
    } else{
      echo "0 results";
    }
   ?>
 </p>
+</div>
 </div>
 </div>
 </body>

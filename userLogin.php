@@ -33,9 +33,6 @@ $row = mysqli_fetch_assoc($result);
 //echo $row;
 if(mysqli_num_rows($result) == 1){
     if($row['employeeID']==$empID && $row['password'] == $password){
-       echo "<h1 style='text-align:center; padding:3%'>Logged In Successfully!</h1>
-        <h2 style='text-align:center'><a style='color: black ; text-decoration: none;' href='homepage.php'>← Proceed to Gallery</a></h2>
-        <h2 style='text-align:center; padding-top:1%'><a style='color: black ; text-decoration: none;' href='useraccount.php'>Go to User Account → </a></h2>";
         $_SESSION['employeeID'] = $row['employeeID'];
         $_SESSION['firstName'] = $row['firstName'];
         $_SESSION['lastName'] = $row['lastName'];
@@ -43,6 +40,10 @@ if(mysqli_num_rows($result) == 1){
         $_SESSION['image_url'] = $row['image_url'];
         $_SESSION['address'] = $row['address'];
         $_SESSION['begin_date'] = $row['begin_date'];
+       echo "<h1 style='text-align:center; padding-top:3%'>Logged In Successfully!</h1>
+        <h1 style='text-align:center; padding:3%'> <div style='padding-bottom:1%'>Welcome to the administrative website </div> <div> for ARTS UNLIMITED, ".$_SESSION["firstName"] . "!</div> </h1>
+        <h2 style='text-align:center'><a style='color: black ; text-decoration: none;' href='homepage.php'>← Proceed to Gallery</a></h2>
+        <h2 style='text-align:center; padding-top:1%'><a style='color: black ; text-decoration: none;' href='useraccount.php'>Go to User Account → </a></h2>";
   //  header("Location: useraccount.php");
         exit();
     }
