@@ -1,16 +1,24 @@
 <html>
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<style type="text/css">
+form {
+ margin: auto;
+ padding: 50px;
+ border: 1px solid DimGray;
+ border-radius: 5px; 
+}
+</style>
 <head>
     <title> LOGIN </title>
 </head>
-<body style="background-image: url('https://res.cloudinary.com/simpleview/image/upload/v1570745187/clients/wichita-redesign/Visit_Wichita_Kansas_Wichita_Art_Museum_ab2f81d5-0500-4ccd-af3a-20835143dc89.jpg');backdrop-filter: blur(5px);background-size: cover;">
+<body style="background-image: url('https://res.cloudinary.com/simpleview/image/upload/v1570745187/clients/wichita-redesign/Visit_Wichita_Kansas_Wichita_Art_Museum_ab2f81d5-0500-4ccd-af3a-20835143dc89.jpg');backdrop-filter: blur(5px);background-size: cover;background-repeat: no-repeat;">
     <style>
 <?php include 'style.css'; ?>
 </style>
     <?php
 include 'header.php'; ?>
 <div style="padding:3%"></div>
-<div style="text-align:center; border: 1px solid #d6d6d6; padding: 1.5%; width: 38%; border-radius: 1%; background-color: #f8f8f8; margin: auto;">
+<div style="text-align:center; border: 1px solid #d6d6d6; padding: 1.5%; border-radius: 1%;  background-color: #f8f8f8; margin: auto;">
     <form action="userLogin.php" method="post">
         <h1>LOGIN</h1>
         <?php
