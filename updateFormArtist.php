@@ -3,7 +3,7 @@
 <style type="text/css">
 form {
  margin: 0;
- padding: 1em 15;
+ padding: 50px;
  border: 1px solid DimGray;
  border-radius: 5px; 
 }
@@ -12,14 +12,16 @@ form {
         include 'header.php';
 		include 'database.php'; ?>
 <div class="container"> 
-    <h1> Update an artist: </h1> 
-    <h3> <i> Please enter the appropriate information below </i> </h3>
-    </div>
+    <h1> <p style="text-align:center"> Update an artist: </p></h1> 
+</div> 
 <div class="container"> 
-    <body>     
-        <form action="updateArtist.php" method="post">
-            <p><h5> Please <b>only</b> fill out the entries you would like to update, and leave the others blank if you would like them to remain the same </h5></p>
-            <p>Artist ID Number: <input type="number" name="artistID" /></p>
+    <body> 
+        <form action="updatePiece.php" method="post">
+            <h3><p style="text-align:center">To start off, which artist would you like to update?</h3></p>
+            <p style="text-align:center"><b>Artist ID Number: </b><input type="number" name="artistID" /></p>
+            <p><br></p>
+            <hr size="8" width="100%" color="black">  
+            <p><h6> Please <b>only</b> fill out the entries you would like to update for the ArtistID, and leave the others blank if you would like them to remain the same: </h6></p>
             <p>First name: <input type="text" name="fname" /></p>
             <p>Last name: <input type="text" name="lname" /></p>
             <p>Address: <input type="text" name="address" /> </p> 

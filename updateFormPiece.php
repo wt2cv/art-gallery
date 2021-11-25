@@ -3,23 +3,22 @@
 <style type="text/css">
 form {
  margin: 0;
- padding: 1em 15;
+ padding: 50px;
  border: 1px solid DimGray;
  border-radius: 5px; 
 }
 </style>
- <?php
-        include 'header.php';
-		include 'database.php'; ?>
 <div class="container"> 
-    <h1> Update a piece: </h1> 
-    <h3> <i> Please enter the appropriate information below </i> </h3>
+    <h1> <p style="text-align:center">Update a piece: </p></h1> 
 </div> 
 <div class="container"> 
     <body> 
         <form action="updatePiece.php" method="post">
-             <p><h5> Please <b>only</b> fill out the entries you would like to update, and leave the others blank if you would like them to remain the same </h5></p>
-            <p>Piece ID Number: <input type="text" name="pieceID" /></p>
+            <h3><p style="text-align:center">To start off, which piece would you like to update?</h3></p>
+            <p style="text-align:center"><b>Piece ID Number:</b> <input type="text" name="pieceID" /></p>
+            <p><br></p>
+            <hr size="8" width="100%" color="black">  
+            <p><h6> Please <b>only</b> fill out the entries you would like to update for the Piece ID, and leave the others blank if you would like them to remain the same: </h6></p>
             <p>Title: <input type="text" name="title" /></p>
             <p>Type: </p>
                 <input type="radio" id="painting" name="type" value="Painting"/>
