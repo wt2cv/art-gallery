@@ -40,15 +40,15 @@ $row = mysqli_fetch_assoc($result);
 	?>
 </h2>
 </div>
-<div style="width:30%; float: right; display: inline-block;">
+<div style="width:43%; float: right; display: inline-block;">
 <p>
 <?php
    if ($result->num_rows > 0) {
   // output data of each row
-    echo "<div style='padding-bottom:4%; padding-top:10%'>Email: " . $_SESSION["email"]. "</div>";
-    echo "<div style='padding-bottom:4%'>Employee ID: " . $_SESSION["employeeID"]. "</div>";
-    echo "<div style='padding-bottom:4%'>Begin Date: " . $_SESSION["begin_date"]. "</div>";
-    echo "<div style='padding-bottom:4%'>Address: " . $_SESSION["address"]. "</div>";
+    echo "<div style='padding-bottom:4%; padding-top:15%'><b>Email:</b> " . $_SESSION["email"]. "</div>";
+    echo "<div style='padding-bottom:4%'><b>Employee ID:</b> " . $_SESSION["employeeID"]. "</div>";
+    echo "<div style='padding-bottom:4%'><b>Begin Date: </b>" . $_SESSION["begin_date"]. "</div>";
+    echo "<div style='padding-bottom:4%'><b>Address: </b>" . $_SESSION["address"]. "</div>";
    } else{
      echo "0 results";
    }

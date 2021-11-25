@@ -11,7 +11,7 @@ form {
 <head>
     <title> LOGIN </title>
 </head>
-<body style="background-image: url('https://res.cloudinary.com/simpleview/image/upload/v1570745187/clients/wichita-redesign/Visit_Wichita_Kansas_Wichita_Art_Museum_ab2f81d5-0500-4ccd-af3a-20835143dc89.jpg');backdrop-filter: blur(5px);background-size: cover;background-repeat: no-repeat;">
+<body style="background-image: url('https://res.cloudinary.com/simpleview/image/upload/v1570745187/clients/wichita-redesign/Visit_Wichita_Kansas_Wichita_Art_Museum_ab2f81d5-0500-4ccd-af3a-20835143dc89.jpg');background-size: cover;background-repeat: no-repeat;">
     <style>
 <?php include 'style.css'; ?>
 </style>
