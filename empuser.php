@@ -1,8 +1,8 @@
 <?php
-$servername = 'us-cdbr-east-04.cleardb.com';
-$username = 'emp';
-$password = 'Po319D';
-$dbname = 'heroku_61c36e5d3c76659';
+$servername = 'mysql01.cs.virginia.edu';
+$username = 'bs6sxv_a';
+$password = 'Fall2021!!';
+$dbname = 'bs6sxv';
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error){

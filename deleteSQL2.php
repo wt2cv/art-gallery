@@ -1,8 +1,14 @@
-<html> 
+<?php
+session_start();
+?>
+<html>
      <?php
-     
-        include 'header.php';
-        include 'database.php';
+        if ($_SESSION['begin_date'] > "2021-01-01") {
+            include 'empuser.php';
+        }
+        if ($_SESSION['begin_date'] <= "2021-01-01") {
+            include 'adminuser.php';
+        }
          ?>
          <style>
 <?php include 'style.css'; ?>
