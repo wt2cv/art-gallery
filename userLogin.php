@@ -40,49 +40,25 @@ if(mysqli_num_rows($result) == 1){
         $_SESSION['image_url'] = $row['image_url'];
         $_SESSION['address'] = $row['address'];
         $_SESSION['begin_date'] = $row['begin_date'];
-        if ($row['begin_date'] > "2021-01-01") {
-            $createsql = "CREATE USER IF NOT EXISTS 'emp'@'us-cdbr-east-04.cleardb.com' IDENTIFIED BY 'Po319D'";
-            mysqli_query($conn, $createsql);
-            $grantsql = "GRANT SELECT, UPDATE, INSERT  ON heroku_61c36e5d3c76659.* TO 'emp'@'us-cdbr-east-04.cleardb.com';";
+        if ($row['begin_date'] >= "2021-01-01") {
+            $grantsql = "GRANT SELECT, UPDATE, INSERT ON bs6sxv.* TO 'bs6sxv_a'@'%';";
             mysqli_query($conn,$grantsql);
-
-            /*
-            session_unset();
-            session_destroy();
             include 'empuser.php';
-            $servername = 'us-cdbr-east-04.cleardb.com';
-            $username = 'emp';
-            $password = 'Po319D';
-            $dbname = 'heroku_61c36e5d3c76659';
-
-            $conn = new mysqli($servername, $username, $password, $dbname);
-            if ($conn->connect_error){
-                die("Connection failed: "
-                    . $conn->connect_error);
-            }*/
         }
         
-        if ($row['begin_date'] <= "2021-01-01") {
-            $createsql1 = "CREATE USER IF NOT EXISTS 'admin'@'us-cdbr-east-04.cleardb.com' IDENTIFIED BY 'Ndp203'";
-            mysqli_query($conn, $createsql1);
-            $grantsql1 = "GRANT ALL PRIVILEGES ON heroku_61c36e5d3c76659.* TO 'emp'@'us-cdbr-east-04.cleardb.com';";
+        if ($row['begin_date'] < "2021-01-01") {
+            $grantsql1 = "GRANT ALL ON bs6sxv.* TO 'bs6sxv_b'@'%';";
             mysqli_query($conn,$grantsql1);
-
-            /*
-            session_unset();
-            session_destroy();
             include 'adminuser.php';
-            $servername = 'us-cdbr-east-04.cleardb.com';
-            $username = 'admin';
-            $password = 'Ndp203';
-            $dbname = 'heroku_61c36e5d3c76659';
-
-            $conn = new mysqli($servername, $username, $password, $dbname);
-            if ($conn->connect_error){
-                die("Connection failed: "
-                    . $conn->connect_error);
-            }*/
         }
+        
+        $conn = new mysqli($servername, $username, $password, $dbname);
+
+        if ($conn->connect_error){
+            die("Connection failed: "
+                . $conn->connect_error);
+        }
+    
 
        echo "<h1 style='text-align:center; padding-top:3%'>Logged In Successfully!</h1>
         <h1 style='text-align:center; padding:3%'> <div style='padding-bottom:1%'>Welcome to the administrative website </div> <div> for ARTS UNLIMITED, ".$_SESSION["firstName"] . "!</div> </h1>
