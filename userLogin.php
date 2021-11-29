@@ -41,13 +41,13 @@ if(mysqli_num_rows($result) == 1){
         $_SESSION['address'] = $row['address'];
         $_SESSION['begin_date'] = $row['begin_date'];
         if ($row['begin_date'] >= "2021-01-01") {
-            $grantsql = "GRANT SELECT, UPDATE, INSERT ON bs6sxv.* TO 'bs6sxv_a'@'%';";
+            $grantsql = "GRANT SELECT, UPDATE, INSERT ON bs6sxv.* TO 'mx2gd_a'@'%';";
             mysqli_query($conn,$grantsql);
             include 'empuser.php';
         }
         
         if ($row['begin_date'] < "2021-01-01") {
-            $grantsql1 = "GRANT ALL ON bs6sxv.* TO 'bs6sxv_b'@'%';";
+            $grantsql1 = "GRANT ALL ON bs6sxv.* TO 'mx2gd_b'@'%';";
             mysqli_query($conn,$grantsql1);
             include 'adminuser.php';
         }
