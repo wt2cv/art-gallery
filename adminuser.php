@@ -1,8 +1,8 @@
 <?php
 $servername = 'mysql01.cs.virginia.edu';
-$username = 'bs6sxv_b';
+$username = 'mx2gd_b';
 $password = 'Fall2021!!';
-$dbname = 'bs6sxv';
+$dbname = 'mx2gd';
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error){
