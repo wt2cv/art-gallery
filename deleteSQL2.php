@@ -3,6 +3,8 @@ session_start();
 ?>
 <html>
      <?php
+     include 'header.php';
+
         if ($_SESSION['begin_date'] > "2021-01-01") {
             include 'empuser.php';
         }

@@ -63,7 +63,7 @@ $row = mysqli_fetch_assoc($result);
 <?php
 }
 else {
-  header("Location: index.php");
+  header("Location: loginPage.php");
   exit();
 }
 ?>
