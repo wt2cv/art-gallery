@@ -23,7 +23,7 @@ form {
 </div> 
 <div class="container"> 
     <body> 
-        <form action="updatePiece.php" method="post">
+        <form action="updateArtist.php" method="post">
             <h3><p style="text-align:center">To start off, which artist would you like to update?</h3></p>
             <p style="text-align:center"><b>Artist ID Number: </b><input type="number" name="artistID" /></p>
             <p><br></p>
